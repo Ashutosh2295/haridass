@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  /* Divine Essence - soft pink, cream, gold, maroon */
+  --color-pink-50: #FDF2F8;
+  --color-pink-100: #FCE7F3;
+  --color-pink-200: #FBCFE8;
+  --color-pink-300: #F9A8D4;
+  --color-pink-400: #F472B6;
+  --color-pink-500: #EC4899;
+
+  --color-cream-50: #FFFBF5;
+  --color-cream-100: #FFF7ED;
+  --color-cream-200: #FFEDD5;
+
+  --color-maroon-600: #7C2D12;
+  --color-maroon-700: #6B2C2C;
+  --color-maroon-800: #5C1A1A;
+
+  --color-gold-400: #FBBF24;
+  --color-gold-500: #D97706;
+  --color-gold-600: #B45309;
+
+  --font-sans: 'Google Sans', 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-serif: 'Google Sans', 'Cormorant Garamond', 'Georgia', serif;
+  --font-cursive: 'Google Sans', 'Inter', system-ui, sans-serif;
+
+  --animate-fade-in: fadeIn 0.5s ease-out;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body, input, button, select, textarea {
+    font-family: "Google Sans", "Inter", "Segoe UI", system-ui, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0;
+  }
+  body *:not(.fa):not([class*="fa-"]) {
+    font-family: inherit;
+  }
+  body {
+    @apply bg-cream-50 text-maroon-700;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-maroon-700;
+  }
+}
+
+.font-cursive {
+  font-family: 'Google Sans', 'Inter', system-ui, sans-serif;
+}
+
+.google-sans {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+/* Ensure Font Awesome icons render correctly - exclude from Google Sans override */
+.fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands,
+i[class*="fa-"], span[class*="fa-"] {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900;
+}
+.fa-regular, .far {
+  font-weight: 400;
+}
+
+.glass-nav {
+  background: rgba(255, 251, 245, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 119, 6, 0.15);
+}
+
+.btn-shop {
+  background: linear-gradient(135deg, #F472B6 0%, #7C2D12 100%);
+  color: white;
+  border: 1px solid #D97706;
+  transition: all 0.3s ease;
+}
+.btn-shop:hover {
+  background: linear-gradient(135deg, #EC4899 0%, #6B2C2C 100%);
+  box-shadow: 0 4px 12px rgba(124, 45, 18, 0.3);
+}
+
+.bg-floral {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-2 0-4 2-4 4s2 4 4 4 4-2 4-4-2-4-4-4zm0 42c-2 0-4 2-4 4s2 4 4 4 4-2 4-4-2-4-4-4z' fill='%23FBCFE8' fill-opacity='0.15'/%3E%3C/svg%3E");
+}
